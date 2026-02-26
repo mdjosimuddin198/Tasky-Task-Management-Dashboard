@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "../dashboard/Sidebar";
 import Navbar from "../dashboard/Navbar";
+import { Outlet } from "react-router-dom";
 
 const DashboardLayout = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,20 +9,12 @@ const DashboardLayout = () => {
     <div className="min-h-screen flex relative">
       {/* Sidebar */}
       <Sidebar isOpen={isOpen} />
-      {/* Overlay (mobile) */}
-      {isOpen && (
-        <div
-          onClick={() => setIsOpen(false)}
-          className="fixed inset-0 bg-white/30 md:hidden"
-        ></div>
-      )}
-
       {/* Main */}
       <main className="flex-1 bg-gray-100 p-3 md:p-4">
         {/* Navbar */}
-        <Navbar />
+        <Navbar setIsOpen={setIsOpen} isOpen={isOpen} />
         {/* Page Content */}
-        <div className="mt-4">Dashboard Content</div>
+        <Outlet />
       </main>
     </div>
   );

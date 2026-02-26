@@ -3,7 +3,7 @@ import { FaBell, FaSearch } from "react-icons/fa";
 import { LuCommand } from "react-icons/lu";
 import { MdEmail, MdMenu } from "react-icons/md";
 
-const Navbar = () => {
+const Navbar = ({ isOpen, setIsOpen }) => {
   return (
     <nav className="flex items-center justify-between bg-white rounded-xl px-3 md:px-6 py-3 shadow-md">
       {/* Menu Button */}

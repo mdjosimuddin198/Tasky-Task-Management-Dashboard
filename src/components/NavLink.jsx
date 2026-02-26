@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const NavLink = ({ item }) => {
+  const location = useLocation();
   return (
     <div>
       {item.category && (
@@ -11,11 +12,11 @@ const NavLink = ({ item }) => {
       )}
 
       <div
-        className={`flex items-center justify-between p-3 rounded-lg cursor-pointer transition-all ${item.label === "Dashboard" ? " border-l-4 border-green-400" : "text-gray-500 hover:bg-gray-100"}`}
+        className={`flex items-center justify-between p-3 rounded-lg cursor-pointer transition-all ${item.path === location.pathname ? " border-l-4 border-green-400" : "text-gray-500 hover:bg-gray-100"}`}
       >
-        <Link className="flex items-center gap-3">
+        <Link to={item.path} className="flex items-center gap-3">
           <item.Icon
-            className={`text-2xl ${item.label === "Dashboard" ? "text-green-400" : ""}`}
+            className={`text-2xl ${item.path === location.pathname ? "text-green-400" : ""}`}
           />
           <span className="text-sm font-medium">{item.label}</span>
         </Link>

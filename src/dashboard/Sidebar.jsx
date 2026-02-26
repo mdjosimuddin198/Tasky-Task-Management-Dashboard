@@ -34,39 +34,39 @@ const Sidebar = ({ isOpen }) => {
       id: 2,
       label: "Tasks",
       Icon: MdTaskAlt,
-      path: "/tasks",
+      path: "/dashboard/tasks",
       badge: "12+",
     },
     {
       id: 3,
       label: "Calendar",
       Icon: MdCalendarToday,
-      path: "/calendar",
+      path: "/dashboard/calendar",
     },
     {
       id: 4,
       label: "Analytics",
       Icon: MdBarChart,
-      path: "/analytics",
+      path: "/dashboard/analytics",
     },
     {
       id: 5,
       label: "Team",
       Icon: MdPeopleOutline,
-      path: "/team",
+      path: "/dashboard/team",
     },
     {
       id: 6,
       label: "Settings",
       Icon: MdOutlineSettings,
-      path: "/settings",
+      path: "/dashboard/settings",
       category: "GENERAL",
     },
     {
       id: 7,
       label: "Help",
       Icon: MdHelpOutline,
-      path: "/help",
+      path: "/dashboard/help",
     },
   ];
 
@@ -95,6 +95,21 @@ const Sidebar = ({ isOpen }) => {
             Log Out
           </button>
         </nav>
+      </div>
+      <div className="bg-[url(https://i.pinimg.com/1200x/70/41/e9/7041e95d55782f2d9c62b97f0f95e6cf.jpg)] bg-center text-white p-4 mt-2 rounded-2xl relative overflow-hidden bg-no-repeat">
+        <div className="relative z-10">
+          <p className="text-xl font-bold leading-tight">
+            Download Our Mobile App
+          </p>
+          <p className="text-xs opacity-70 mt-1 italic">
+            Get easy in another way
+          </p>
+        </div>
+        <button className="flex items-center cursor-pointer mt-4 bg-linear-to-r from-[#114d33] via-[#1d6b46] to-[#145a3a] text-white px-6 py-2 rounded-2xl gap-3">
+          Download App
+        </button>
+        {/* ব্যাকগ্রাউন্ড শেপ সিমুলেশন */}
+        <div className="absolute -bottom-5 -right-5 w-20 h-20 bg-emerald-800 rounded-full blur-xl opacity-50"></div>
       </div>
     </aside>
   );
