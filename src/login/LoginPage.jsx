@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import manageTask from "../../assets/manageTask.json";
+import manageTask from "../assets/manageTask.json";
 import Lottie from "lottie-react";
 import { toast } from "react-toastify";
 import { FiEyeOff } from "react-icons/fi";
