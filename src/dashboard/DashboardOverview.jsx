@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { IoAddCircle } from "react-icons/io5";
 import { MdNorthEast, MdArrowDropUp } from "react-icons/md";
-import { data } from "react-router-dom";
+import ProjectTimeTrackerCard from "./ProjectTimeTrackerCard";
+import CollaborationCard from "./CollaborationCard";
+import ProjectProgress from "./ProjectProgress";
+import ProjectAnalytics from "./ProjectAnalytics";
+import ReminderCard from "./ReminderCard";
 const DashboardOverview = () => {
   const [datas, setDatas] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -56,7 +60,7 @@ const DashboardOverview = () => {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mt-4 ">
+      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-2 mt-4 ">
         {overviews.map((overview) => (
           <div
             key={overview.id}
@@ -87,6 +91,17 @@ const DashboardOverview = () => {
             <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-green-400/20 blur-3xl rounded-full"></div>
           </div>
         ))}
+
+        {/* project analytics  */}
+        <ProjectAnalytics analytics={datas.analytics} />
+        {/* Remainder card  */}
+        <ReminderCard />
+        {/* project and time tracker  */}
+        <ProjectTimeTrackerCard products={datas.products} />
+        {/* Collaboration team  */}
+        <CollaborationCard users={datas.users} />
+        {/* project progress s */}
+        <ProjectProgress />
       </div>
     </>
   );

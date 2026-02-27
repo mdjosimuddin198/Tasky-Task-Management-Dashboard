@@ -13,8 +13,9 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import NavLink from "../components/NavLink";
+import { RxCross2 } from "react-icons/rx";
 
-const Sidebar = ({ isOpen }) => {
+const Sidebar = ({ isOpen, setIsOpen }) => {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
   const handleLogOut = () => {
@@ -73,13 +74,20 @@ const Sidebar = ({ isOpen }) => {
   const location = useLocation();
   return (
     <aside
-      className={`fixed md:static top-0 left-0 h-full w-64 bg-white p-4 transition-transform duration-300
+      className={`fixed md:static top-0 left-0 z-50 h-full w-64 bg-white p-4 transition-transform duration-300
            ${isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}
     >
       <div className="flex items-center gap-1 font-semibold">
         <nav className="space-y-2">
-          <div className="flex items-center">
-            <MdAddTask className="text-xl" /> <h2 className="text-xl">Tasky</h2>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-1">
+              <MdAddTask className="text-xl" />{" "}
+              <h2 className="text-xl">Tasky</h2>
+            </div>
+            <RxCross2
+              className="text-2xl mt-0.5 md:hidden cursor-pointer"
+              onClick={() => setIsOpen(!isOpen)}
+            />
           </div>
           <h2 className="font-semibold text-xs  text-gray-400 mt-8 mb-4 tracking-widest">
             Menu
@@ -96,7 +104,7 @@ const Sidebar = ({ isOpen }) => {
           </button>
         </nav>
       </div>
-      <div className="bg-[url(https://i.pinimg.com/1200x/70/41/e9/7041e95d55782f2d9c62b97f0f95e6cf.jpg)] bg-center text-white p-4 mt-2 rounded-2xl relative overflow-hidden bg-no-repeat">
+      <div className="bg-[url(https://i.pinimg.com/1200x/70/41/e9/7041e95d55782f2d9c62b97f0f95e6cf.jpg)] bg-center text-white p-4  rounded-2xl relative md:top-46 overflow-hidden bg-no-repeat">
         <div className="relative z-10">
           <p className="text-xl font-bold leading-tight">
             Download Our Mobile App

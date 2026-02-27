@@ -8,7 +8,7 @@ const DashboardLayout = () => {
   return (
     <div className="min-h-screen flex relative">
       {/* Sidebar */}
-      <Sidebar isOpen={isOpen} />
+      <Sidebar setIsOpen={setIsOpen} isOpen={isOpen} />
       {/* Main */}
       <main className="flex-1 bg-gray-100 p-3 md:p-4">
         {/* Navbar */}
