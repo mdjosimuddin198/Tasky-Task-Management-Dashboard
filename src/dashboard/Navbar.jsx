@@ -35,7 +35,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         </button>
 
         <img
-          src="https://i.pravatar.cc/40"
+          src="https://i.ibb.co.com/7tRxvwSC/Untitled-design-2.png"
           alt="user"
           className="w-8 h-8 md:w-10 md:h-10 rounded-full"
         />

@@ -7,7 +7,7 @@ const StatsCard = ({ overviews }) => {
       {overviews.map((overview) => (
         <div
           key={overview.id}
-          className=" px-4 py-2  rounded-4xl bg-white text-black hover:bg-linear-to-br from-[#1a4d2e] via-[#24633a] to-[#3db55e] hover:text-white shadow-xl relative overflow-hidden"
+          className=" px-4 py-2  transition-all transform hover:scale-105 hover:shadow-xl  rounded-4xl bg-white text-black hover:bg-linear-to-br from-[#1a4d2e] via-[#24633a] to-[#3db55e] hover:text-white shadow-xl relative overflow-hidden"
         >
           <div className="flex justify-between items-start mb-4">
             <h3 className="text-xl font-medium opacity-90">{overview.lable}</h3>

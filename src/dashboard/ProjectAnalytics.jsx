@@ -6,7 +6,7 @@ const ProjectAnalytics = ({ analytics }) => {
     border: "1px solid #e5e7eb",
   };
   return (
-    <div className=" p-6 bg-white md:col-span-2 rounded-3xl shadow-sm font-sans border border-gray-100">
+    <div className=" p-6 transition transform hover:scale-105 hover:shadow-xl bg-white md:col-span-2 rounded-3xl shadow-sm font-sans border border-gray-100">
       <h2 className="text-xl font-semibold mb-10 text-gray-800">
         Project Analytics
       </h2>

@@ -5,12 +5,13 @@ import LoginPage from "../login/LoginPage";
 import ProtectedRoute from "./ProtectedRoute";
 import DashboardLayout from "../dashboardLayout/DashboardLayout";
 import DashboardOverview from "../dashboard/DashboardOverview";
+import ErrorPage from "../components/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <h2>page not found</h2>,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomeRedirect /> },
       { path: "login", element: <LoginPage /> },
@@ -25,7 +26,14 @@ const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <DashboardOverview /> },
-      { path: "/dashboard/tasks", element: <h2>Welcome to task</h2> },
+      {
+        path: "/dashboard/tasks",
+        element: (
+          <h2 className="text-5xl text-center font-semibold">
+            Welcome to task
+          </h2>
+        ),
+      },
     ],
   },
 ]);

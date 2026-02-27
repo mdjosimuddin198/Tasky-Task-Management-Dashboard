@@ -2,7 +2,7 @@ import React from "react";
 
 const ReminderCard = () => {
   return (
-    <div className=" p-6 bg-white rounded-4xl shadow-sm border border-gray-50 font-sans">
+    <div className=" p-6 transition transform hover:scale-105 hover:shadow-xl bg-white rounded-4xl shadow-sm border border-gray-50 font-sans">
       {/* Header */}
       <h3 className="text-gray-900 font-bold text-lg mb-4">Reminders</h3>
 

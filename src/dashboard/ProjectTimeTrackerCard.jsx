@@ -31,7 +31,7 @@ const ProjectTimeTrackerCard = ({ products }) => {
   return (
     <div className="flex flex-col gap-6 lg:row-span-2 font-sans">
       {/* Project List Card */}
-      <div className="bg-white p-6 rounded-4xl  shadow-sm border border-gray-50">
+      <div className="bg-white transition transform hover:scale-105 hover:shadow-xl p-6 rounded-4xl  shadow-sm border border-gray-50">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-xl font-bold text-gray-900">Project</h2>
           <button className="flex items-center gap-1 border border-emerald-900 text-emerald-900 px-3 py-1 rounded-full text-sm font-medium hover:bg-emerald-50 transition-colors">
@@ -56,7 +56,7 @@ const ProjectTimeTrackerCard = ({ products }) => {
       </div>
 
       {/* Functional Time Tracker Card */}
-      <div className="relative overflow-hidden bg-[#0a3622] p-6 rounded-4xl flex flex-col justify-between">
+      <div className="relative overflow-hidden transition transform hover:scale-105 hover:shadow-xl bg-[#0a3622] p-6 rounded-4xl flex flex-col justify-between">
         {/* Background Decorative Rings (SVG style) */}
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border-20 border-emerald-400 rounded-full blur-2xl"></div>

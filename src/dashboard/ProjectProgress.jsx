@@ -14,7 +14,7 @@ const ProjectProgress = () => {
   const progressLen = (inProgress / 100) * circumference;
   const pendingLen = (pending / 100) * circumference;
   return (
-    <div className="bg-gray-100 md:col-span-2 lg:col-span-1 p-6 rounded-2xl shadow">
+    <div className="bg-gray-100 transition transform hover:scale-105 hover:shadow-xl md:col-span-2 lg:col-span-1 p-6 rounded-2xl shadow">
       <h2 className="text-lg font-semibold mb-4">Project Progress</h2>
 
       <div className="flex justify-center items-center relative">

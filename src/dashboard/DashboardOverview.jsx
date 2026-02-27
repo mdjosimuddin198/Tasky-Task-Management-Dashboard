@@ -6,6 +6,7 @@ import CollaborationCard from "./CollaborationCard";
 import ProjectProgress from "./ProjectProgress";
 import ProjectAnalytics from "./ProjectAnalytics";
 import ReminderCard from "./ReminderCard";
+import Loading from "../components/Loading";
 const DashboardOverview = () => {
   const [datas, setDatas] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -32,7 +33,7 @@ const DashboardOverview = () => {
     fetchData();
   }, []);
   if (loading) {
-    return <h2>Loading....</h2>;
+    return <Loading />;
   }
   console.log(datas);
   const overviews = [

@@ -2,7 +2,7 @@ import React from "react";
 
 const CollaborationCard = ({ users }) => {
   return (
-    <div className=" md:col-span-2 rounded-4xl bg-white p-6 rounded-32 shadow-sm border border-gray-100">
+    <div className=" md:col-span-2 transition transform hover:scale-105 hover:shadow-xl rounded-4xl bg-white p-6 rounded-32 shadow-sm border border-gray-100">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-bold text-gray-800">Team Collaboration</h2>
         <button className="flex items-center gap-1 border border-emerald-900 text-emerald-900 px-2 py-1.5 rounded-full text-sm  hover:bg-emerald-50 transition-colors">
